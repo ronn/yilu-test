@@ -3,14 +3,17 @@
 **1. Write a function that accepts a string str and returns the first non-repeated character.**
 
 [Solution](https://github.com/ronn/yilu-test/blob/master/src/main/java/YiluService.java) - getFirstNonRepeatedChar(String  str)
+
 [Test](https://github.com/ronn/yilu-test/blob/master/src/test/java/YiluTest.java) - testGetFirstNonRepeatedChar()
 
 **2. Write a function that accepts two strings (a) and (b) and answers true if (b) is a rotation of (a).**
 
 [Solution](https://github.com/ronn/yilu-test/blob/master/src/main/java/YiluService.java) - isRotation(String  a, String  b)
+
 [Test](https://github.com/ronn/yilu-test/blob/master/src/test/java/YiluTest.java) - testIsRotation()
 
 **3. What is a sum type? What is a product type?**
+
 Both concepts come from Algebraic data types which are types that represent data that have properties from algebra such as distributivity, commutativity, identities, ETC.
 
 - Product Type is the representation of different types together in one.
@@ -23,6 +26,7 @@ Best example could be Boolean type which could be either true or false but not b
 There are some other examples like Optional which could be an instance of Some or None (depending on the language)
 
 **4. What does reduce do? map? flatMap? Give one simple example for each one.**
+
 All of them are High Order Functions.
 Given:
 ```javascript
@@ -38,7 +42,7 @@ list.reduce((a, b) => a + b)
 
 ***.map():*** Take each element that exist in the object and transform it by applying the given function and return the same object with the new values. A => B
 
-we can "transform" list to a new array with it's elements multiplied by 2 using map
+we can "transform" list to a new array with its elements multiplied by 2 using map
 ```javascript
 list.map(x => x * 2)
 ```		
@@ -68,4 +72,5 @@ list.flatMap(x => x.map(y => y * 2))
 - **Rating**: Will listen the payment event and will enable the possibility to rate the reservation
 
 **b. Where would you store your data? Explain your choices.**
+
 A database for persisting the data and if it's possible propagate projections to a DB for reading
