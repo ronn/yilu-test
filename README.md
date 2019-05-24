@@ -75,3 +75,12 @@ list.flatMap(x => x.map(y => y * 2))
 Each MS will have its own persistence unity which will be a relational database to structure the related information organized in tables containing the entities of the functional unity of the business.
 
 If it's necessary propagate projections to a different system such as Elastic search to performance reading operations
+
+
+**6. What is CAP? What does it mean?**
+
+- Consistency: Every read receives the most recent write or an error
+- Availability: Every request receives a (non-error) response – without the guarantee that it contains the most recent write
+- Partition tolerance: The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes
+
+There is a theorem by Eric Brewer, that says it is impossible for a distributed data store to simultaneously provide more than two out of the above guarantees
