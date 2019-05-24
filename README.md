@@ -72,5 +72,6 @@ list.flatMap(x => x.map(y => y * 2))
 
 **b. Where would you store your data? Explain your choices.**
 
-Each MS will have its own persistence unity which will be a relational database to structure the related information organized in tables containing the entities of the functional unity of the business
+Each MS will have its own persistence unity which will be a relational database to structure the related information organized in tables containing the entities of the functional unity of the business.
+
 If it's necessary propagate projections to a different system such as Elastic search to performance reading operations
