@@ -63,14 +63,14 @@ list.flatMap(x => x.map(y => y * 2))
 
 **a. Which microservices can you identify?**
 
-
-- **Booking**: will manage the reservations and will trigger a notification 1 our before
-	and propagate the reservations to other microservices
-- **Codes**: Will listen the booking and generate the QR code. This ms will be able as well to read QR codes and validate them to propagate the arrival
+- **Users**: Will manage the registration and login of users
+- **Booking**: Will manage the reservations, trigger a notification 1 our before
+	and propagate the reservations and ask a service for QR codes (like a an amazon Lambda) and will be in charge of their validation
 
 - **Payment**: Will listen the client arrival to enable, register and manage the payments for clients and will propagate the payment
 - **Rating**: Will listen the payment event and will enable the possibility to rate the reservation
 
 **b. Where would you store your data? Explain your choices.**
 
-A database for persisting the data and if it's possible propagate projections to a DB for reading
+Each MS will have its own persistence unity which will be a relational database to structure the related information organized in tables containing the entities of the functional unity of the business
+If it's necessary propagate projections to a different system such as Elastic search to performance reading operations
